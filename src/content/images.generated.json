@@ -1,0 +1,297 @@
+{
+  "antislip-hexagon-closeup": {
+    "width": 960,
+    "height": 1166,
+    "variants": [
+      640
+    ]
+  },
+  "antislip-panel": {
+    "width": 2560,
+    "height": 1193,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "birch-panel-stack": {
+    "width": 2568,
+    "height": 1926,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "core-layers-edge": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "eucalyptus-core-stack": {
+    "width": 2560,
+    "height": 1707,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "eucalyptus-edge-macro": {
+    "width": 2560,
+    "height": 1707,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "eucalyptus-face-panel": {
+    "width": 1920,
+    "height": 2026,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ev-plywood-sheets": {
+    "width": 1473,
+    "height": 749,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ev-plywood-stack": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-black-stack": {
+    "width": 1838,
+    "height": 1211,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-branded-panels": {
+    "width": 1600,
+    "height": 720,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-panel-stack": {
+    "width": 1920,
+    "height": 1784,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-premium-edge": {
+    "width": 973,
+    "height": 2163,
+    "variants": [
+      640
+    ]
+  },
+  "ffp-stack-angle": {
+    "width": 1920,
+    "height": 1889,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-stack-wide": {
+    "width": 1920,
+    "height": 1657,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-thickness-tape": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "furniture-panels": {
+    "width": 2048,
+    "height": 1252,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "okoume-face-panel": {
+    "width": 1280,
+    "height": 960,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "pine-furniture-plywood": {
+    "width": 1735,
+    "height": 2560,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "pine-plywood-face": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "poplar-panel-inspection": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "poplar-plywood-face": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "production-hall": {
+    "width": 960,
+    "height": 542,
+    "variants": [
+      640
+    ]
+  },
+  "qc-bending-test": {
+    "width": 1000,
+    "height": 545,
+    "variants": [
+      640
+    ]
+  },
+  "qc-caliper-ffp": {
+    "width": 2163,
+    "height": 973,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "qc-dial-gauge": {
+    "width": 1726,
+    "height": 1742,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "qc-dimension-check": {
+    "width": 1060,
+    "height": 1280,
+    "variants": [
+      640
+    ]
+  },
+  "qc-moisture-meter": {
+    "width": 963,
+    "height": 1280,
+    "variants": [
+      640
+    ]
+  },
+  "qc-thickness-caliper": {
+    "width": 1600,
+    "height": 1199,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "veneer-joint-machine": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-jointing-hall": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-jointing-line": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-sorting-floor": {
+    "width": 2560,
+    "height": 2198,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-storage": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "film-pattern": {
+    "width": 1200,
+    "height": 2400,
+    "variants": [
+      600,
+      1200
+    ]
+  }
+}

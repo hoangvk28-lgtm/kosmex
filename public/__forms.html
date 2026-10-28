@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Form definitions</title></head>
+<body>
+<!-- Static definition so Netlify Forms registers every RFQ field at deploy time.
+     Keep field names in sync with src/components/RFQForm.tsx. -->
+<form name="rfq" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+  <input name="bot-field"><input name="name"><input name="company"><input name="email"><input name="phone">
+  <input name="country"><input name="port"><input name="category"><input name="product"><input name="product-label">
+  <input name="thickness"><input name="dimensions"><input name="film"><input name="delivery">
+  <input name="quantity"><input name="unit"><input name="documents"><textarea name="requirements"></textarea>
+  <input name="attachment" type="file"><input name="consent">
+</form>
+</body>
+</html>
