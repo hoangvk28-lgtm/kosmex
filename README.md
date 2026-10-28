@@ -33,3 +33,11 @@ Never put an unverified number in a `pending` row — change status only with a 
 5. IndexNow (Bing): after each production deploy run `node scripts/indexnow.mjs`.
 
 No server runtime is used, so every route is a static HTML file; 404s use out/404.html.
+
+## Deploying on Vercel
+
+1. Import the GitHub repo in Vercel (framework: Next.js, defaults are fine). `vercel.json` carries the cache/security headers and redirects that `netlify.toml` provides on Netlify.
+2. RFQ form: Netlify Forms does not exist on Vercel. Create a free access key at https://web3forms.com (enter the sales inbox, e.g. anna@kosmexgroup.com), then in Vercel → Project → Settings → Environment Variables add:
+   - `NEXT_PUBLIC_WEB3FORMS_KEY` = the access key
+   - `NEXT_PUBLIC_RFQ_LIVE` = `true` (after a test submission arrives; removes the preview notice)
+   Redeploy after adding variables. Without a key the form shows an error with the sales email, never a fake success. File attachments are not delivered on the Web3Forms free plan; the email notes the file name instead.

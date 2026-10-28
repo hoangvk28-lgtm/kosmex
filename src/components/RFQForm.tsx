@@ -14,10 +14,36 @@ import { Icon } from "./Icon";
  * response. If the backend is unreachable (local preview, other host), the
  * user sees an error with the sales email instead of a fake confirmation.
  *
+ * On hosts without Netlify Forms (e.g. Vercel), set NEXT_PUBLIC_WEB3FORMS_KEY
+ * and submissions go to Web3Forms instead, which emails the sales inbox.
+ *
  * NEXT_PUBLIC_RFQ_LIVE=true is set once Kosmex confirms that submission
  * notifications reach the sales inbox; until then a preview notice is shown.
  */
 const LIVE = process.env.NEXT_PUBLIC_RFQ_LIVE === "true";
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+async function deliver(fd: FormData) {
+  if (WEB3FORMS_KEY) {
+    // Web3Forms' free plan does not accept file uploads; mention it in the email instead.
+    const file = fd.get("attachment");
+    fd.delete("attachment");
+    if (file instanceof File && file.size) fd.set("attachment-note", `Buyer attached "${file.name}" (not delivered by form; ask the buyer to email it).`);
+    fd.delete("form-name");
+    fd.delete("bot-field");
+    fd.set("access_key", WEB3FORMS_KEY);
+    fd.set("subject", `RFQ — ${fd.get("company") ?? ""} (${fd.get("country") ?? ""})`);
+    fd.set("from_name", "Kosmex Plywood website");
+    fd.set("replyto", String(fd.get("email") ?? ""));
+    const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd, headers: { Accept: "application/json" } });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || !json.success) throw new Error(json.message || String(res.status));
+    return;
+  }
+  // Netlify Forms accepts multipart posts to any static path of the site.
+  const res = await fetch("/__forms.html", { method: "POST", body: fd });
+  if (!res.ok) throw new Error(String(res.status));
+}
 const FORM_NAME = "rfq";
 
 const EU = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"];
@@ -104,9 +130,7 @@ export function RFQForm() {
     fd.set("product-label", getProduct(String(fd.get("product")))?.name ?? String(fd.get("product")));
     setState("sending");
     try {
-      // Netlify Forms accepts multipart posts to any static path of the site.
-      const res = await fetch("/__forms.html", { method: "POST", body: fd });
-      if (!res.ok) throw new Error(String(res.status));
+      await deliver(fd);
       setState("sent");
       form.reset();
       window.scrollTo({ top: (formRef.current?.offsetTop ?? 0) - 140, behavior: "smooth" });
