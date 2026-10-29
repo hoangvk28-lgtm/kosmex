@@ -13,17 +13,18 @@ import { Icon } from "./Icon";
 type Scene = { kind: "film" | "photo"; image?: string; kicker: string; title: string; text: string; href: string; motion: string };
 
 const SCENES: Scene[] = [
-  { kind: "photo", image: "ffp-kosmex-render", kicker: "Flagship · Film Faced Plywood", title: "KOSMEX film faced plywood", text: "Logo printed into the film · 1220 × 2440 · 1250 × 2500 · 610 × 2500 mm", href: "/products/film-faced-plywood/", motion: "kb-in" },
+  { kind: "photo", image: "hero-ffp-collage", kicker: "Flagship · Film Faced Plywood", title: "KOSMEX film faced plywood", text: "Logo printed into the film · 1220 × 2440 · 1250 × 2500 · 610 × 2500 mm", href: "/products/film-faced-plywood/", motion: "kb-in" },
+  { kind: "photo", image: "ffp-render-stack", kicker: "Film Faced Plywood", title: "Recognised by our brand", text: "Phenolic film · 120 / 180 / 220 g/m²", href: "/products/film-faced-plywood/", motion: "kb-left" },
+  { kind: "photo", image: "ffp-render-closeup", kicker: "Film Faced Plywood", title: "Hardwood cores, sealed edges", text: "Acacia & eucalyptus cores", href: "/products/film-faced-plywood/", motion: "kb-right" },
   { kind: "photo", image: "ffp-factory-stacks", kicker: "Our factory", title: "Built for performance. Recognised by our brand.", text: "Phenolic film · 120 / 180 / 220 g/m² · acacia & eucalyptus cores", href: "/products/film-faced-plywood/", motion: "kb-left" },
-  { kind: "photo", image: "factory-layup-hall", kicker: "Manufacturing", title: "Produced in our own facilities", text: "Northern Vietnam · from veneer to finished panel", href: "/manufacturing/", motion: "kb-up" },
+  { kind: "photo", image: "factory-press-hall", kicker: "Manufacturing", title: "Produced in our own facilities", text: "Northern Vietnam · from veneer to finished panel", href: "/manufacturing/", motion: "kb-up" },
 ];
 
-const DURATION = 5200;
+const DURATION = 3500;
 
 export function HeroReel() {
   const [i, setI] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [reduced, setReduced] = useState(false);
+    const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -31,18 +32,16 @@ export function HeroReel() {
   }, []);
 
   useEffect(() => {
-    if (paused || reduced) return;
+    if (reduced) return;
     const t = setTimeout(() => setI((n) => (n + 1) % SCENES.length), DURATION);
     return () => clearTimeout(t);
-  }, [i, paused, reduced]);
+  }, [i, reduced]);
 
   const s = SCENES[i];
 
   return (
     <section
       className="on-dark relative isolate flex h-[min(calc(100svh-76px),860px)] min-h-[620px] flex-col overflow-hidden bg-forest-3 text-white lg:h-[min(calc(100svh-112px),880px)]"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       style={{ ["--dur" as string]: `${DURATION}ms` }}
     >
       {/* Scenes */}
@@ -94,7 +93,7 @@ export function HeroReel() {
                     onClick={(e) => { e.preventDefault(); setI(n); }}
                     className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-white/20"
                   >
-                    <span className={`absolute inset-y-0 left-0 rounded-full bg-gold ${n < i ? "w-full" : n === i ? (reduced ? "w-full" : "reel-progress") : "w-0"}`} style={{ animationPlayState: paused ? "paused" : "running" }} key={n === i ? `p-${i}` : undefined} />
+                    <span className={`absolute inset-y-0 left-0 rounded-full bg-gold ${n < i ? "w-full" : n === i ? (reduced ? "w-full" : "reel-progress") : "w-0"}`} key={n === i ? `p-${i}` : undefined} />
                   </button>
                 ))}
                 <Icon name="arrow" className="ml-2 h-4 w-4 text-white/70 transition-transform group-hover:translate-x-1" />

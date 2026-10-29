@@ -37,7 +37,7 @@ export function FilmHero() {
         </div>
         <div className="lg:col-span-6">
           <div className="relative h-[340px] overflow-hidden rounded-2xl sm:h-[460px] lg:h-[560px]">
-            <Img name="ffp-kosmex-render" alt="KOSMEX film faced plywood panel with the logo printed across the film" priority sizes="(min-width:1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
+            <Img name="ffp-render-green" alt="KOSMEX film faced plywood panel with the logo printed across the film" priority sizes="(min-width:1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
           </div>
         </div>
       </div>

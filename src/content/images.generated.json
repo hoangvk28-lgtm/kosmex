@@ -12,7 +12,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "birch-panel-stack": {
@@ -21,7 +22,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "core-layers-edge": {
@@ -39,7 +41,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "eucalyptus-edge-macro": {
@@ -48,7 +51,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "eucalyptus-face-panel": {
@@ -74,7 +78,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "factory-layup-hall": {
@@ -127,13 +132,6 @@
       1920
     ]
   },
-  "ffp-kosmex-render": {
-    "width": 984,
-    "height": 576,
-    "variants": [
-      640
-    ]
-  },
   "ffp-panel-stack": {
     "width": 1920,
     "height": 1784,
@@ -148,6 +146,46 @@
     "height": 2163,
     "variants": [
       640
+    ]
+  },
+  "ffp-render-closeup": {
+    "width": 1639,
+    "height": 959,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-render-green": {
+    "width": 1639,
+    "height": 959,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-render-light": {
+    "width": 1639,
+    "height": 960,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-render-stack": {
+    "width": 1639,
+    "height": 959,
+    "variants": [
+      640,
+      1200
+    ]
+  },
+  "ffp-render-standing": {
+    "width": 1639,
+    "height": 960,
+    "variants": [
+      640,
+      1200
     ]
   },
   "ffp-stack-angle": {
@@ -186,6 +224,16 @@
       1920
     ]
   },
+  "hero-ffp-collage": {
+    "width": 2560,
+    "height": 960,
+    "variants": [
+      640,
+      1200,
+      1920,
+      2560
+    ]
+  },
   "okoume-face-panel": {
     "width": 1280,
     "height": 960,
@@ -217,7 +265,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "poplar-panel-inspection": {
@@ -315,7 +364,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "veneer-jointing-hall": {
@@ -324,7 +374,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "veneer-jointing-line": {
@@ -333,7 +384,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "veneer-sanding-line": {
@@ -351,7 +403,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "veneer-storage": {
@@ -360,7 +413,8 @@
     "variants": [
       640,
       1200,
-      1920
+      1920,
+      2560
     ]
   },
   "film-pattern": {

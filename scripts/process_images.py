@@ -12,7 +12,7 @@ Image.MAX_IMAGE_PIXELS = None
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "assets-src"
 OUT = ROOT / "public" / "images"
-WIDTHS = [640, 1200, 1920]
+WIDTHS = [640, 1200, 1920, 2560]
 
 manifest = {}
 OUT.mkdir(parents=True, exist_ok=True)
@@ -27,7 +27,7 @@ for f in sorted((SRC / "photos").glob("*.jpg")):
         tw = min(tw, w)
         th = round(h * tw / w)
         name = f"{f.stem}-{tw}.webp"
-        im.resize((tw, th), Image.LANCZOS).save(OUT / name, "WEBP", quality=78, method=6)
+        im.resize((tw, th), Image.LANCZOS).save(OUT / name, "WEBP", quality=88, method=6)
         variants.append(tw)
     manifest[f.stem] = {"width": w, "height": h, "variants": variants}
 

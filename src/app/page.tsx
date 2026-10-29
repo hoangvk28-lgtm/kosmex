@@ -120,7 +120,7 @@ export default function Home() {
           <div className="lg:col-span-6">
             <div className="grid grid-cols-5 gap-4">
               <div className="reveal-img col-span-3 overflow-hidden rounded-2xl">
-                <Img name="ffp-kosmex-render" alt="KOSMEX film faced plywood panel with the logo printed across the film" sizes="(min-width:1024px) 30vw, 60vw" className="aspect-[3/4] h-full w-full object-cover" />
+                <Img name="ffp-render-standing" alt="KOSMEX film faced plywood panel with the logo printed across the film" sizes="(min-width:1024px) 30vw, 60vw" className="aspect-[3/4] h-full w-full object-cover" />
               </div>
               <div className="col-span-2 flex flex-col gap-4 pt-16">
                 <div className="reveal-img film-surface aspect-[1/2] rounded-2xl" role="img" aria-label="KOSMEX film print artwork on dark brown phenolic film" />
@@ -143,8 +143,8 @@ export default function Home() {
             <Link href="/manufacturing/" className="pill-link mt-8">Our manufacturing <Icon name="arrow" className="h-4 w-4" /></Link>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-12">
-            <Photo name="factory-layup-hall" cls="col-span-2 md:col-span-7 aspect-[16/10]" caption="Veneer lay-up hall" />
-            <Photo name="factory-press-hall" cls="md:col-span-5 aspect-square md:aspect-auto" caption="Hot press line" />
+            <Photo name="factory-press-hall" cls="col-span-2 md:col-span-7 aspect-[16/10]" caption="Hot press line" />
+            <Photo name="ffp-factory-panels" cls="md:col-span-5 aspect-square md:aspect-auto" caption="Film faced panel inspection" />
             <Photo name="veneer-sanding-line" cls="md:col-span-4 aspect-square" caption="Sanding line" />
             <Photo name="ffp-factory-stacks" cls="col-span-2 md:col-span-8 aspect-[16/9] md:aspect-auto" caption="Finished film faced panels" />
           </div>
