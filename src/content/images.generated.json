@@ -26,6 +26,14 @@
       2560
     ]
   },
+  "container-loading": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      640,
+      1200
+    ]
+  },
   "core-layers-edge": {
     "width": 1920,
     "height": 2560,
@@ -80,6 +88,14 @@
       1200,
       1920,
       2560
+    ]
+  },
+  "export-packaging": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      640,
+      1200
     ]
   },
   "factory-layup-hall": {
@@ -251,6 +267,14 @@
       1920
     ]
   },
+  "pallet-labelling": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      640,
+      1200
+    ]
+  },
   "pine-furniture-plywood": {
     "width": 1735,
     "height": 2560,
@@ -415,6 +439,14 @@
       1200,
       1920,
       2560
+    ]
+  },
+  "warehouse-storage": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      640,
+      1200
     ]
   },
   "film-pattern": {

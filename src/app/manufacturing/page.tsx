@@ -91,9 +91,13 @@ export default function ManufacturingPage() {
         <div className="wrap">
           <SectionHeading align="split" eyebrow="Warehouse, packaging & export" title="Prepared for international transport" lede="Packaging for film faced plywood is declared in the Kosmex TDS as carton sheets and plastic straps. Labelling and loading follow each order." />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {[["Warehouse & storage", "Covered, flat storage of finished panels"], ["Packaging", "Carton sheets & plastic straps"], ["Pallet labelling", "Order and batch identification"], ["Container loading", "Export loading at origin"]].map(([t, d]) => (
+            {[["Warehouse & storage", "Covered, flat storage of finished panels", "warehouse-storage"], ["Packaging", "Carton sheets & plastic straps", "export-packaging"], ["Pallet labelling", "Order and batch identification", "pallet-labelling"], ["Container loading", "Export loading at origin", "container-loading"]].map(([t, d, img]) => (
               <figure key={t}>
-                <ImageSlot label={t} className="aspect-[4/3]" />
+                {img ? (
+                  <div className="relative aspect-[4/3] overflow-hidden"><Img name={img} alt={`${t}: ${d}`} sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" /></div>
+                ) : (
+                  <ImageSlot label={t} className="aspect-[4/3]" />
+                )}
                 <figcaption className="mt-3"><span className="font-display font-bold text-forest">{t}</span><span className="block text-[.88rem] text-muted">{d}</span></figcaption>
               </figure>
             ))}
