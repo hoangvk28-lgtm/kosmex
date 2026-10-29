@@ -1,8 +1,9 @@
-import { FilmPanel } from "./FilmPanel";
 import { Img } from "./Img";
 import { Icon } from "./Icon";
+import { TechnicalTable } from "./TechnicalTable";
 import { Breadcrumbs, Button, PendingNote, SectionHeading, StatusBadge, StatusLegend } from "./ui";
 import type { Status } from "@/content/site";
+import type { SpecRow } from "@/content/products";
 import { getDoc } from "@/content/documents";
 
 /* Flagship hero (dark, branded) ------------------------------------------- */
@@ -23,7 +24,7 @@ export function FilmHero() {
             Phenolic film faced formwork plywood on acacia and eucalyptus hardwood cores, with the KOSMEX logo printed directly on the film surface.
           </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {["Logo-printed film for site identification", "120 · 180 · 220 g/m² film options", "1220 × 2440 · 1250 × 2500 mm", "EN-method laboratory test reports"].map((b) => (
+            {["Logo-printed film for site identification", "120 · 180 · 220 g/m² film options", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm or customised", "EN-method laboratory test reports"].map((b) => (
               <li key={b} className="flex gap-3 text-[.95rem] text-white/90">
                 <Icon name="check" className="mt-1 h-4 w-4 shrink-0 text-gold" strokeWidth={2.4} />{b}
               </li>
@@ -35,7 +36,9 @@ export function FilmHero() {
           </div>
         </div>
         <div className="lg:col-span-6">
-          <FilmPanel className="h-[400px] sm:h-[520px] lg:h-[600px]" />
+          <div className="relative h-[340px] overflow-hidden rounded-2xl sm:h-[460px] lg:h-[560px]">
+            <Img name="ffp-kosmex-render" alt="KOSMEX film faced plywood panel with the logo printed across the film" priority sizes="(min-width:1024px) 50vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
+          </div>
         </div>
       </div>
     </section>
@@ -65,14 +68,18 @@ const comparison: { attr: string; cells: [Cell, Cell, Cell] }[] = [
   { attr: "Available documentation", cells: [D("TDS (Oct 2025)"), P, { v: "TDS + EN 310 test report", s: "verified" }] },
 ];
 
-export function GradeComparison() {
+// Range-wide rows already shown per grade in the comparison table.
+const IN_COMPARISON = ["Core species", "Film weight", "Glue type", "Bonding classification", "Thickness options"];
+
+export function GradeComparison({ rows }: { rows: SpecRow[] }) {
+  const rangeRows = rows.filter((r) => !IN_COMPARISON.includes(r.label));
   return (
-    <section id="grades" className="section scroll-mt-40 bg-ivory-2">
+    <section id="specifications" className="section scroll-mt-40 bg-ivory-2">
       <div className="wrap">
         <SectionHeading
           align="split"
-          eyebrow="Grade comparison"
-          title="Three grades, compared on the same terms"
+          eyebrow="Specifications & grades"
+          title="Three grades, one specification"
           lede="Economy and Premium map to the Eco Form and Premium Form columns of the Kosmex Technical Data Sheet. Standard has no published specification yet."
         />
         <div className="table-scroll mt-12 rounded-2xl border border-line bg-white">
@@ -104,6 +111,8 @@ export function GradeComparison() {
             </tbody>
           </table>
         </div>
+        <h3 className="mt-14 text-[1.25rem]">Range-wide specification</h3>
+        <div className="mt-6"><TechnicalTable rows={rangeRows} caption="Film faced plywood range-wide specifications" legend={false} /></div>
         <StatusLegend className="mt-5" />
         <PendingNote className="mt-6">
           Grade names (Economy / Standard / Premium) are provisional until Kosmex confirms its commercial grade structure. Re-use cycles are deliberately left out: the TDS gives an indicative figure, but no test evidence has been published.
@@ -127,10 +136,10 @@ export function WhyBranded() {
         <div className="lg:col-span-5">
           <figure className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <Img name="qc-dimension-check" alt="Tape measure across a KOSMEX-printed black film faced panel during inspection" sizes="(min-width:1024px) 40vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
+              <Img name="ffp-factory-stacks" alt="Tape measure across a KOSMEX-printed black film faced panel during inspection" sizes="(min-width:1024px) 40vw, 100vw" className="absolute inset-0 h-full w-full object-cover" />
             </div>
             <div className="film-surface absolute -bottom-8 -right-6 hidden h-48 w-32 shadow-2xl md:block" aria-hidden />
-            <figcaption className="mt-4 text-[.8rem] text-white/55">Dimensional check on a logo-printed panel. The current print shows the KOSMEX CO., LTD mark; the K KOSMEX film artwork is shown inset.</figcaption>
+            <figcaption className="mt-4 text-[.8rem] text-white/55">Finished KOSMEX film faced panels in our factory; the K KOSMEX film artwork is shown inset.</figcaption>
           </figure>
         </div>
         <div className="lg:col-span-7">

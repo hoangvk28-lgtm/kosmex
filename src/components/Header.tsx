@@ -62,7 +62,7 @@ export function Header() {
       {/* Utility bar */}
       <div className="hidden bg-forest-3 text-[.78rem] text-white/70 lg:block">
         <div className="wrap flex h-9 items-center justify-between">
-          <span className="tracking-wide">Plywood manufacturer · Vietnam · Supplying European importers</span>
+          <span className="tracking-wide">Leading Plywood Manufacturer & Exporter · Vietnam</span>
           <div className="flex items-center gap-6">
             <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 hover:text-white"><Icon name="mail" className="h-3.5 w-3.5" />{site.email}</a>
             <a href={site.phoneHref} className="inline-flex items-center gap-2 hover:text-white"><Icon name="phone" className="h-3.5 w-3.5" />{site.phoneDisplay}</a>

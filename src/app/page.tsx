@@ -18,7 +18,7 @@ export const metadata = {
       "Kosmex Plywood: branded film faced plywood, furniture, upholstery and packing plywood manufactured in Vietnam. Technical data sheets, test reports and RFQ for European buyers.",
     path: "/",
   }),
-  title: { absolute: "Kosmex Plywood — Engineered Plywood. Proven Quality." },
+  title: { absolute: "Kosmex Plywood — Leading Plywood Manufacturer & Exporter in Vietnam" },
 };
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
           <div className="reveal mx-auto max-w-3xl text-center">
             <p className="kicker">Who we are</p>
             <h2 className="serif mt-5 text-[clamp(1.9rem,1.3rem+2vw,3rem)] font-normal leading-[1.12]">
-              A plywood manufacturer that puts its name on the panel
+              Kosmex Plywood — the leading plywood factory & exporter in Vietnam
             </h2>
             <p className="mt-6 text-[1.08rem] leading-relaxed text-muted">
               {site.legalName} produces plywood for construction, furniture and export packaging. Our flagship film faced plywood carries the KOSMEX mark printed into the film, so every sheet on site can be traced back to its specification and documents.
@@ -46,7 +46,7 @@ export default function Home() {
             {[
               ["FSC® Chain of Custody", "BV-COC-220900", "Bureau Veritas certificate"],
               ["Laboratory tested", "EN 310 · EN 438-2", "Published test reports"],
-              ["Film print format", "1250 × 2500 mm", "KOSMEX logo on the film"],
+              ["Panel formats", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm", "or customised size"],
             ].map(([k, v, s]) => (
               <div key={k} className="bg-sage px-8 py-9 text-center">
                 <dt className="text-[.72rem] font-semibold uppercase tracking-[.18em] text-forest-2">{k}</dt>
@@ -100,7 +100,7 @@ export default function Home() {
             <dl className="mt-10 max-w-xl divide-y divide-white/12 border-y border-white/12">
               {[
                 ["Film", "Brown / black phenolic · 120 · 180 · 220 g/m²"],
-                ["Sizes", "1220 × 2440 · 1250 × 2500 mm"],
+                ["Sizes", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm · customised size"],
                 ["Thickness", "9–21 mm"],
                 ["Glue", "MUF / PF · EN 314-2 class per grade"],
                 ["Surface", "Abrasion 680 rev. (EN 438-2) · R10 anti-slip variant"],
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="lg:col-span-6">
             <div className="grid grid-cols-5 gap-4">
               <div className="reveal-img col-span-3 overflow-hidden rounded-2xl">
-                <Img name="ffp-branded-panels" alt="Workers handling black film faced plywood printed with the KOSMEX logo" sizes="(min-width:1024px) 30vw, 60vw" className="aspect-[3/4] h-full w-full object-cover" />
+                <Img name="ffp-kosmex-render" alt="KOSMEX film faced plywood panel with the logo printed across the film" sizes="(min-width:1024px) 30vw, 60vw" className="aspect-[3/4] h-full w-full object-cover" />
               </div>
               <div className="col-span-2 flex flex-col gap-4 pt-16">
                 <div className="reveal-img film-surface aspect-[1/2] rounded-2xl" role="img" aria-label="KOSMEX film print artwork on dark brown phenolic film" />
@@ -143,10 +143,10 @@ export default function Home() {
             <Link href="/manufacturing/" className="pill-link mt-8">Our manufacturing <Icon name="arrow" className="h-4 w-4" /></Link>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-12">
-            <Photo name="veneer-jointing-line" cls="col-span-2 md:col-span-7 aspect-[16/10]" caption="Core veneer jointing line" />
-            <Photo name="veneer-storage" cls="md:col-span-5 aspect-square md:aspect-auto" caption="Dried veneer staged for lay-up" />
-            <Photo name="qc-dial-gauge" cls="md:col-span-4 aspect-square" caption="Thickness gauge check" />
-            <Photo name="eucalyptus-core-stack" cls="col-span-2 md:col-span-8 aspect-[16/9] md:aspect-auto" caption="Finished panels, even core layers" />
+            <Photo name="factory-layup-hall" cls="col-span-2 md:col-span-7 aspect-[16/10]" caption="Veneer lay-up hall" />
+            <Photo name="factory-press-hall" cls="md:col-span-5 aspect-square md:aspect-auto" caption="Hot press line" />
+            <Photo name="veneer-sanding-line" cls="md:col-span-4 aspect-square" caption="Sanding line" />
+            <Photo name="ffp-factory-stacks" cls="col-span-2 md:col-span-8 aspect-[16/9] md:aspect-auto" caption="Finished film faced panels" />
           </div>
         </div>
       </section>

@@ -64,13 +64,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </section>
 
       <Overview paragraphs={c.overview} strengths={c.benefits} considerations={c.flagship ? ["Re-use depends on handling, release agent and pour type", "Specify grade per application", "Reseal cut edges on site"] : ["Grade, glue and emission class are agreed per order", "Range TDS pending publication"]} />
-      {c.flagship && <GradeComparison />}
-      <Specs rows={c.specs} name={c.name} />
-      {c.flagship && <AntiSlipVariant />}
-      {c.flagship && <WhyBranded />}
-      <Applications items={c.applications} image={c.flagship ? "ffp-branded-panels" : c.image} imageAlt={c.imageAlt} />
-      <QualityBlock />
+      {c.flagship ? <GradeComparison rows={c.specs} /> : <Specs rows={c.specs} name={c.name} />}
       <Documents docs={docs} />
+      {c.flagship && <AntiSlipVariant />}
+      <QualityBlock />
+      <Applications items={c.applications} image={c.flagship ? "ffp-factory-panels" : c.image} imageAlt={c.imageAlt} />
+      {c.flagship && <WhyBranded />}
       <Related slugs={related} />
       <CTASection title={`Request a quote for ${c.name}`} text="Tell us thickness, size, grade, quantity and destination port. The product is preselected on the form." rfqHref={rfqFor(c.slug)} />
 

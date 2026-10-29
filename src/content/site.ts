@@ -9,7 +9,7 @@ export const site = {
   brand: "KOSMEX PLYWOOD",
   legalName: "KOSMEX COMPANY LIMITED",
   shortLegal: "KOSMEX CO., LTD.",
-  tagline: "Engineered plywood. Proven quality.",
+  tagline: "The leading plywood factory & exporter in Vietnam.",
   description:
     "Kosmex Plywood manufactures film faced, furniture, upholstery and packing plywood in Vietnam for European importers, distributors and manufacturers.",
   founded: "2010", // per kosmexgroup.com "About"; confirm
@@ -24,7 +24,8 @@ export const site = {
   },
   email: "anna@kosmexgroup.com",
   phoneDisplay: "+84 399 741 589",
-  phoneHref: "tel:+84399741589",
+  // Phone links open WhatsApp (client request).
+  phoneHref: "https://wa.me/84399741589",
   // kosmexgroup.com links wa.me/0399741589 (missing country code). Normalised
   // to +84 here; confirm this is the official sales WhatsApp line.
   whatsappHref: "https://wa.me/84399741589",

@@ -13,9 +13,9 @@ import { qcStages } from "@/content/quality";
 export const SUBNAV = [
   ["overview", "Overview"],
   ["specifications", "Specifications"],
-  ["applications", "Applications"],
-  ["quality", "Quality control"],
   ["documents", "Documents"],
+  ["quality", "Quality control"],
+  ["applications", "Applications"],
   ["related", "Related"],
 ] as const;
 

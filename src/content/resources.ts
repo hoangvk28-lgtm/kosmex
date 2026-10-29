@@ -7,7 +7,7 @@ export type ResourceSection = "technical-guides" | "import-procurement-guides" |
 export const resourceSections: { slug: ResourceSection | "knowledge-center" | "faq"; title: string; text: string }[] = [
   { slug: "knowledge-center", title: "Plywood Knowledge Center", text: "Every guide, comparison and update in one place." },
   { slug: "technical-guides", title: "Technical Guides", text: "How to read specifications, data sheets and test reports." },
-  { slug: "import-procurement-guides", title: "Import & Procurement Guides", text: "Documents, inspection and planning for EU importers." },
+  { slug: "import-procurement-guides", title: "Export & Procurement Guides", text: "Documents, inspection and planning for EU importers." },
   { slug: "product-comparisons", title: "Product Comparisons", text: "Grades, species and constructions side by side." },
   { slug: "news-insights", title: "News & Insights", text: "Company updates and documentation releases." },
   { slug: "faq", title: "FAQ", text: "Short answers to common buyer questions." },
@@ -163,7 +163,7 @@ export const faqs: { q: string; a: string }[] = [
   { q: "Where is Kosmex plywood manufactured?", a: "In Vietnam. Kosmex's head office is in Hanoi, and production is in northern Vietnam (Tuyen Quang Province, according to company information)." },
   { q: "Which products does Kosmex Plywood offer?", a: "Four ranges: Film Faced Plywood (flagship), Furniture Plywood, Upholstery Plywood and Packing Plywood." },
   { q: "Can the KOSMEX logo be printed on film faced plywood?", a: "Yes. Kosmex film faced plywood can carry the KOSMEX logo printed in the film surface, on a 1250 × 2500 mm print layout. Confirm availability for your grade and film colour with the sales team." },
-  { q: "What sizes are available for film faced plywood?", a: "1220 × 2440 mm and 1250 × 2500 mm as standard, plus custom sizes, per the Kosmex TDS. Thickness range is 9–21 mm." },
+  { q: "What sizes are available for film faced plywood?", a: "1220 × 2440, 1250 × 2500 and 610 × 2500 mm as standard, or customised size, per the Kosmex TDS. Thickness range is 9–21 mm." },
   { q: "Is Kosmex FSC certified?", a: "Kosmex Company Limited holds FSC Chain of Custody certificate BV-COC-220900 (Bureau Veritas) for trading of FSC 100% and FSC Mix products, valid to 23 Sep 2030. A product is FSC-certified only when sold with an FSC claim on the sales documents." },
   { q: "Is Kosmex film faced plywood CE marked?", a: "A Declaration of Performance has not yet been published. Ask the sales team for the current status before relying on CE marking." },
   { q: "How many times can film faced plywood be reused?", a: "Re-use depends on grade, handling, release agent and the type of pour. Kosmex does not publish a guaranteed number of re-uses. Discuss your application with the sales team." },

@@ -51,9 +51,9 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
       </div>
       <Overview paragraphs={p.overview} strengths={p.strengths} considerations={p.considerations} />
       <Specs rows={p.specs} name={p.name} />
-      <Applications items={p.applications} image={p.image} imageAlt={p.imageAlt} />
-      <QualityBlock />
       <Documents docs={docs} />
+      <QualityBlock />
+      <Applications items={p.applications} image={p.image} imageAlt={p.imageAlt} />
       <Related slugs={p.related} />
       <CTASection title={`Request a quote for ${p.name}`} text="The product is preselected on the RFQ form. Add thickness, size, quantity and destination port." rfqHref={rfqFor(p.slug)} />
       <JsonLd

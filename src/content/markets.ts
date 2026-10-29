@@ -101,7 +101,7 @@ export const markets: Market[] = [
     language: "Spanish; English for technical correspondence",
     faqs: [
       { q: "Which film faced grade suits multi-storey building work?", a: "Premium grade (180 g/m² film, MUF/PF glue) is intended for repeated-cycle building formwork. Compare grades on the Film Faced Plywood page and confirm with the sales team." },
-      { q: "Can panels be supplied in 1250 × 2500 mm?", a: "Yes. 1250 × 2500 mm and 1220 × 2440 mm are both standard sizes in the Kosmex TDS, and custom sizes are possible." },
+      { q: "Can panels be supplied in 1250 × 2500 mm?", a: "Yes. 1220 × 2440, 1250 × 2500 and 610 × 2500 mm are standard formats, and customised sizes are possible." },
     ],
     article: "film-faced-plywood-tds-guide",
     map: { x: 27, y: 70 },

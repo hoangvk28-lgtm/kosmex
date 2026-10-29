@@ -77,6 +77,22 @@
       1920
     ]
   },
+  "factory-layup-hall": {
+    "width": 960,
+    "height": 542,
+    "variants": [
+      640
+    ]
+  },
+  "factory-press-hall": {
+    "width": 2163,
+    "height": 973,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
   "ffp-black-stack": {
     "width": 1838,
     "height": 1211,
@@ -91,6 +107,31 @@
     "variants": [
       640,
       1200
+    ]
+  },
+  "ffp-factory-panels": {
+    "width": 2400,
+    "height": 1800,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-factory-stacks": {
+    "width": 2163,
+    "height": 973,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "ffp-kosmex-render": {
+    "width": 984,
+    "height": 576,
+    "variants": [
+      640
     ]
   },
   "ffp-panel-stack": {
@@ -151,6 +192,15 @@
     "variants": [
       640,
       1200
+    ]
+  },
+  "packing-panel-stack": {
+    "width": 2400,
+    "height": 1600,
+    "variants": [
+      640,
+      1200,
+      1920
     ]
   },
   "pine-furniture-plywood": {
@@ -241,6 +291,24 @@
       1200
     ]
   },
+  "upholstery-panel-stack": {
+    "width": 2400,
+    "height": 1600,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-grading": {
+    "width": 2400,
+    "height": 1600,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
   "veneer-joint-machine": {
     "width": 2560,
     "height": 1920,
@@ -262,6 +330,15 @@
   "veneer-jointing-line": {
     "width": 2560,
     "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
+  "veneer-sanding-line": {
+    "width": 2400,
+    "height": 1600,
     "variants": [
       640,
       1200,
