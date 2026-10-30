@@ -130,6 +130,13 @@
       1200
     ]
   },
+  "ffp-factory-collage": {
+    "width": 1086,
+    "height": 1448,
+    "variants": [
+      640
+    ]
+  },
   "ffp-factory-panels": {
     "width": 2400,
     "height": 1800,
@@ -248,6 +255,15 @@
       1200,
       1920,
       2560
+    ]
+  },
+  "hero-ffp-workers": {
+    "width": 2098,
+    "height": 749,
+    "variants": [
+      640,
+      1200,
+      1920
     ]
   },
   "okoume-face-panel": {

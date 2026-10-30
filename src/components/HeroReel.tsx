@@ -10,13 +10,11 @@ import { Icon } from "./Icon";
  * production shots with Ken Burns motion, crossfades, a film-print close-up and
  * per-scene captions. No video file, so it stays light and fully static-exportable.
  */
-type Scene = { kind: "film" | "photo"; image?: string; kicker: string; title: string; text: string; href: string; motion: string };
+type Scene = { kind: "film" | "photo"; image?: string; kicker: string; title: string; text: string; href: string; motion: string; tag?: string };
 
 const SCENES: Scene[] = [
+  { kind: "photo", image: "hero-ffp-workers", kicker: "Film Faced Plywood", title: "Built for performance", text: "Black phenolic film · acacia & eucalyptus cores", href: "/products/film-faced-plywood/", motion: "kb-in", tag: "Sklejka do budowy ogrodzeń" },
   { kind: "photo", image: "hero-ffp-collage", kicker: "Flagship · Film Faced Plywood", title: "KOSMEX film faced plywood", text: "Logo printed into the film · 1220 × 2440 · 1250 × 2500 · 610 × 2500 mm", href: "/products/film-faced-plywood/", motion: "kb-in" },
-  { kind: "photo", image: "ffp-render-stack", kicker: "Film Faced Plywood", title: "Recognised by our brand", text: "Phenolic film · 120 / 180 / 220 g/m²", href: "/products/film-faced-plywood/", motion: "kb-left" },
-  { kind: "photo", image: "ffp-render-closeup", kicker: "Film Faced Plywood", title: "Hardwood cores, sealed edges", text: "Acacia & eucalyptus cores", href: "/products/film-faced-plywood/", motion: "kb-right" },
-  { kind: "photo", image: "ffp-factory-stacks", kicker: "Our factory", title: "Built for performance. Recognised by our brand.", text: "Phenolic film · 120 / 180 / 220 g/m² · acacia & eucalyptus cores", href: "/products/film-faced-plywood/", motion: "kb-left" },
   { kind: "photo", image: "factory-press-hall", kicker: "Manufacturing", title: "Produced in our own facilities", text: "Northern Vietnam · from veneer to finished panel", href: "/manufacturing/", motion: "kb-up" },
 ];
 
@@ -53,6 +51,7 @@ export function HeroReel() {
             ) : (
               <Img name={sc.image!} alt="" priority sizes="100vw" className={`absolute inset-0 h-full w-full object-cover ${n === i ? sc.motion : ""}`} />
             )}
+            {sc.tag && <span lang="pl" className="absolute right-6 top-6 z-[4] rounded-full bg-forest-3/55 px-3 py-1.5 text-[.85rem] font-medium tracking-[.08em] text-white/90 backdrop-blur-sm md:right-10 md:top-8">{sc.tag}</span>}
           </div>
         ))}
         {/* light sweep across the film on scene 1 */}
@@ -68,8 +67,8 @@ export function HeroReel() {
             <p className="hero-in text-[.8rem] font-semibold uppercase tracking-[.22em] text-white/75" style={{ ["--d" as string]: "0ms" }}>
               Kosmex Plywood
             </p>
-            <h1 className="hero-in serif mt-6 text-[clamp(2.4rem,1.2rem+4vw,4.6rem)] font-normal leading-[1] tracking-[-.02em] text-white" style={{ ["--d" as string]: "120ms" }}>
-              The leading plywood factory <span className="italic text-gold">&amp; exporter in Vietnam</span>
+            <h1 className="hero-in serif mt-6 text-[clamp(2rem,1rem+3vw,3.6rem)] font-normal leading-[1] tracking-[-.02em] text-white" style={{ ["--d" as string]: "120ms" }}>
+              The leading plywood factory &amp; exporter in Vietnam
             </h1>
             <div className="hero-in mt-9 flex flex-wrap gap-3" style={{ ["--d" as string]: "360ms" }}>
               <Link href="/products/" className="btn btn-gold">Explore products <Icon name="arrow" className="h-4 w-4" /></Link>

@@ -46,11 +46,11 @@ export default function Home() {
             {[
               ["FSC® Chain of Custody", "BV-COC-220900", "Bureau Veritas certificate"],
               ["Laboratory tested", "EN 310 · EN 438-2", "Published test reports"],
-              ["Panel formats", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm", "or customised size"],
+              ["Panel formats", "1220 × 2440 mm\n1250 × 2500 mm\n610 × 2500 mm", "or customised size"],
             ].map(([k, v, s]) => (
               <div key={k} className="bg-sage px-8 py-9 text-center">
                 <dt className="text-[.72rem] font-semibold uppercase tracking-[.18em] text-forest-2">{k}</dt>
-                <dd className="serif mt-3 text-[1.7rem] leading-tight text-forest">{v}</dd>
+                <dd className="serif mt-3 whitespace-pre-line text-[1.7rem] leading-[1.5] text-forest">{v}</dd>
                 <dd className="mt-1.5 text-[.88rem] text-muted">{s}</dd>
               </div>
             ))}
