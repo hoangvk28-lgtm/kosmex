@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { Img } from "@/components/Img";
 import { QualityNav } from "@/components/quality";
 import { TechnicalTable } from "@/components/TechnicalTable";
-import { ArrowLink, Button, PageHero, PendingNote, SectionHeading, StatusLegend } from "@/components/ui";
+import { ArrowLink, Button, PageHero, SectionHeading } from "@/components/ui";
 import { machines, qcStages, qualityPages } from "@/content/quality";
 import { documents } from "@/content/documents";
 import { categories, productHref } from "@/content/products";
@@ -91,7 +91,6 @@ function ProductSpecs() {
   return (
     <section className="section">
       <div className="wrap">
-        <StatusLegend />
         <div className="mt-10 space-y-4">
           {categories.map((c, i) => (
             <details key={c.slug} open={i === 0} className="group overflow-hidden rounded-2xl border border-line bg-white">
@@ -142,7 +141,6 @@ function QcReports() {
               <li key={f} className="flex gap-4 py-3.5 text-[.98rem]"><span className="w-6 font-display text-[.82rem] font-bold text-gold-2">{String(i + 1).padStart(2, "0")}</span>{f}</li>
             ))}
           </ol>
-          <PendingNote className="mt-6">The report template and its acceptance criteria are to be confirmed by Kosmex. The fields above show the structure buyers can expect.</PendingNote>
         </div>
         <div className="lg:col-span-6">
           <div className="relative aspect-[4/5] overflow-hidden bg-forest">
@@ -195,7 +193,7 @@ function TestingInspection() {
     ["Dimensional inspection", "Length, width and squareness checked against EN 315 tolerances (±1 mm).", "qc-dimension-check"],
     ["Bending & stiffness", "Bending strength and MOE verified on test equipment and by external laboratories (EN 310).", "qc-bending-test"],
   ] as const;
-  const lab = [["EN 310", "Bending strength & modulus of elasticity", "Published"], ["EN 438-2", "Abrasion resistance of film surface", "Published"], ["DIN 51130", "Anti-slip property (ramp test)", "Published"], ["JAS 0233-2", "Bending strength, 12 mm plywood", "Published"], ["EN 314-1/-2", "Bonding quality", "Pending"], ["Formaldehyde", "Emission class (method to be confirmed)", "Pending"]];
+  const lab = [["EN 310", "Bending strength & modulus of elasticity", "Published"], ["EN 438-2", "Abrasion resistance of film surface", "Published"], ["DIN 51130", "Anti-slip property (ramp test)", "Published"], ["JAS 0233-2", "Bending strength, 12 mm plywood", "Published"], ["EN 717-1", "Formaldehyde emission, 9 mm plywood", "Published"]];
   return (
     <>
       <section className="section">
@@ -241,7 +239,7 @@ function MaterialExpertise() {
   ];
   const glues = [
     ["MR (urea-formaldehyde)", "Moisture resistant, for interior use. Not intended for wetting or boiling."],
-    ["MUF (melamine-urea-formaldehyde)", "Better water resistance than UF. Used in the Kosmex Eco Form grade (BR-6h boil-resistant declaration)."],
+    ["MUF (melamine-urea-formaldehyde)", "Better water resistance than UF. Used in the Kosmex Economy and Medium grades (BR-6h / BR-12h boil-resistant declaration)."],
     ["PF (phenol-formaldehyde)", "Dark, highly water-resistant glue associated with exterior / EN 314-2 Class 3 bonding."],
     ["WBP", "“Weather and boil proof”: a traditional trade term. A buyer should ask for the EN 314 class and test report instead."],
   ];

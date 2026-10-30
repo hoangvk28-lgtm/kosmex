@@ -17,10 +17,7 @@ import { Icon } from "./Icon";
  * On hosts without Netlify Forms (e.g. Vercel), set NEXT_PUBLIC_WEB3FORMS_KEY
  * and submissions go to Web3Forms instead, which emails the sales inbox.
  *
- * NEXT_PUBLIC_RFQ_LIVE=true is set once Kosmex confirms that submission
- * notifications reach the sales inbox; until then a preview notice is shown.
  */
-const LIVE = process.env.NEXT_PUBLIC_RFQ_LIVE === "true";
 const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
 async function deliver(fd: FormData) {
@@ -167,11 +164,6 @@ export function RFQForm() {
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <p className="hidden"><label>Leave empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
 
-      {!LIVE && (
-        <div role="note" className="mb-8 border-l-2 border-amber bg-amber-bg px-5 py-4 text-[.88rem] text-[#6b4a14]">
-          <strong>Preview notice:</strong> delivery of form submissions to the Kosmex sales inbox is still being configured. To make sure your request arrives, please also email <a className="font-semibold underline" href={`mailto:${site.email}`}>{site.email}</a>.
-        </div>
-      )}
 
       {Object.keys(errors).length > 0 && (
         <div role="alert" className="mb-8 border-l-2 border-[#b3261e] bg-[#fdf0ef] px-5 py-4 text-[.9rem] text-[#8c1d18]">
@@ -217,7 +209,7 @@ export function RFQForm() {
         <Field id="film" label="Film weight (film faced only)">
           <select id="film" name="film" className="field-input" defaultValue="">
             <option value="">Not applicable / not sure</option>
-            <option>120 g/m²</option><option>180 g/m²</option><option>220 g/m² (anti-slip)</option><option>Other</option>
+            <option>120 g/m²</option><option>130 g/m²</option><option>145 g/m²</option><option>180–240 g/m² (anti-slip)</option><option>Other</option>
           </select>
         </Field>
         <Field id="delivery" label="Expected delivery window">

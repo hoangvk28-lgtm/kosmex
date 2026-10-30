@@ -1,4 +1,4 @@
-import { PageHero, PendingNote } from "@/components/ui";
+import { PageHero } from "@/components/ui";
 import { site } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -10,7 +10,6 @@ export default function PrivacyPage() {
       <PageHero crumbs={[{ name: "Privacy Policy", href: "/privacy-policy/" }]} title="Privacy Policy" />
       <section className="section-sm">
         <div className="wrap max-w-3xl space-y-6 text-charcoal/85">
-          <PendingNote>Draft for legal review. Kosmex must confirm this policy with its legal adviser, including GDPR obligations for EU visitors, before launch.</PendingNote>
           <h2 className="text-[length:var(--text-h3)]">Controller</h2>
           <p>{site.legalName}, {site.office.lines.join(", ")}. Contact: {site.email}.</p>
           <h2 className="text-[length:var(--text-h3)]">Data we collect</h2>

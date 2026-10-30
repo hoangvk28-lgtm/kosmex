@@ -35,10 +35,10 @@ export const articles: Article[] = [
     relatedProducts: ["film-faced-plywood", "premium-grade", "economy-grade"],
     body: [
       { h: "Start with construction, not adjectives", p: ["A useful TDS defines the panel's construction: core species, film type and weight, glue system and edge treatment. Words like “high quality” or “marine” mean nothing without these values."] },
-      { h: "Film weight (g/m²)", p: ["Film weight is the mass of resin-impregnated paper per square metre on each face. Heavier film gives a thicker, more durable casting surface. Across the Kosmex range the TDS declares 120 g/m² (Eco Form), 180 g/m² (Premium Form) and 220 g/m² (Anti-slip)."] },
+      { h: "Film weight (g/m²)", p: ["Film weight is the mass of resin-impregnated paper per square metre on each face. Heavier film gives a thicker, more durable casting surface. Across the Kosmex range the TDS declares 120 g/m² (Common), 130 g/m² (Medium), 145 g/m² (Premium) and 180–240 g/m² (Anti-slip)."] },
       { h: "Glue system and bond class", p: ["MUF (melamine-urea-formaldehyde) and PF (phenol-formaldehyde) glues behave differently under boiling and cyclic wetting. EN 314-2 defines bonding classes 1, 2 and 3. Class 3 is intended for exterior conditions. Always check which test the bond class is based on, and whether a report exists."] },
       { h: "Physical properties and their EN methods", list: ["Density: EN 323", "Moisture content: EN 322", "Dimensions and tolerances: EN 315", "Bending strength and modulus of elasticity: EN 310", "Bond quality: EN 314-1 / EN 314-2"] },
-      { h: "Declared vs. tested", p: ["A TDS is a manufacturer declaration. A laboratory test report covers one tested sample, under a named method, on a stated date. For example, the Kosmex 18 mm EN 310 bending result (T&T Laboratory 06/MCI.AHK/IV/25) supports the bending values declared for Premium Form. Ask your supplier which declared values are backed by reports."] },
+      { h: "Declared vs. tested", p: ["A TDS is a manufacturer declaration. A laboratory test report covers one tested sample, under a named method, on a stated date. For example, the Kosmex 18 mm EN 310 bending result (T&T Laboratory 06/MCI.AHK/IV/25) supports the bending values declared for the Premium grade. Ask your supplier which declared values are backed by reports."] },
     ],
   },
   {
@@ -109,7 +109,7 @@ export const articles: Article[] = [
     description: "The properties that matter in hidden furniture structures, and how to write them into a specification.",
     date: "2026-10-26",
     readMinutes: 4,
-    relatedProducts: ["upholstery-plywood", "sofa-frame-applications", "bed-frame-bed-slat-applications"],
+    relatedProducts: ["upholstery-plywood", "bed-frame-bed-slat-applications"],
     body: [
       { h: "Core quality over face grade", p: ["Frame parts are covered by upholstery, so face appearance hardly matters. Core gaps and overlaps, however, weaken staple and screw holding and must be limited."] },
       { h: "Thickness consistency", p: ["Jig-based assembly and CNC nesting depend on consistent thickness. Specify tolerance, not just nominal thickness."] },
@@ -119,14 +119,14 @@ export const articles: Article[] = [
   {
     slug: "film-faced-grades-compared",
     section: "product-comparisons",
-    title: "Economy vs. Standard vs. Premium film faced plywood",
+    title: "Economy vs. Medium vs. Premium film faced plywood",
     description: "How the Kosmex film faced grades differ in film, core, glue and declared mechanical properties.",
     date: "2026-10-26",
     readMinutes: 3,
-    relatedProducts: ["economy-grade", "standard-grade", "premium-grade"],
+    relatedProducts: ["economy-grade", "medium-grade", "premium-grade"],
     body: [
-      { h: "Summary", p: ["Economy maps to the TDS “Eco Form” (120 g/m² film, acacia core, MUF). Premium maps to “Premium Form” (180 g/m², acacia/eucalyptus, MUF/PF). Standard is reserved for a grade that Kosmex has not yet specified. See the full comparison table on the Film Faced Plywood page."] },
-      { h: "Which to choose", list: ["Economy: cost-sensitive, short-cycle pours", "Premium: repeated-cycle building formwork and better concrete finish", "Anti-slip (220 g/m²): flooring, trailers and walkways"] },
+      { h: "Summary", p: ["Economy is the TDS “Common” grade (120 g/m² film, AB hand-jointed core, MUF, 6–8 re-uses). Medium is the TDS “Medium” grade (130 g/m², machine-dried core, BR-12h, 10–12 re-uses). Premium is “Premium” (145 g/m², 100% A machine-jointed core, MUF/PF, 12–15 or 20+ re-uses). See the full comparison table on the Film Faced Plywood page."] },
+      { h: "Which to choose", list: ["Economy: cost-sensitive, short-cycle pours", "Medium: general building formwork with more cycles", "Premium: repeated-cycle building formwork, fences and better concrete finish", "Anti-slip (180–240 g/m²): flooring, trailers and walkways"] },
     ],
   },
   {
@@ -166,7 +166,7 @@ export const faqs: { q: string; a: string }[] = [
   { q: "What sizes are available for film faced plywood?", a: "1220 × 2440, 1250 × 2500 and 610 × 2500 mm as standard, or customised size, per the Kosmex TDS. Thickness range is 9–21 mm." },
   { q: "Is Kosmex FSC certified?", a: "Kosmex Company Limited holds FSC Chain of Custody certificate BV-COC-220900 (Bureau Veritas) for trading of FSC 100% and FSC Mix products, valid to 23 Sep 2030. A product is FSC-certified only when sold with an FSC claim on the sales documents." },
   { q: "Is Kosmex film faced plywood CE marked?", a: "A Declaration of Performance has not yet been published. Ask the sales team for the current status before relying on CE marking." },
-  { q: "How many times can film faced plywood be reused?", a: "Re-use depends on grade, handling, release agent and the type of pour. Kosmex does not publish a guaranteed number of re-uses. Discuss your application with the sales team." },
+  { q: "How many times can film faced plywood be reused?", a: "Re-use depends on grade, handling, release agent and the type of pour. Kosmex states typical cycles of 6–8 (Economy), 10–12 (Medium), 12–15 with MUF glue and 20+ with PF glue (Premium). Discuss your application with the sales team." },
   { q: "How do I request a quotation?", a: "Use the Request a Quote form with product, thickness, size, quantity (m³ or containers) and destination port, or email the sales team." },
 ];
 

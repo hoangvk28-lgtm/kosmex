@@ -49,7 +49,7 @@ export const availabilityLabel: Record<Availability, string> = {
   pending: "Pending publication",
 };
 
-const FFP = ["film-faced-plywood", "economy-grade", "standard-grade", "premium-grade"];
+const FFP = ["film-faced-plywood", "economy-grade", "medium-grade", "premium-grade"];
 
 export const documents: Doc[] = [
   {
@@ -59,12 +59,12 @@ export const documents: Doc[] = [
     product: "Film Faced Plywood",
     productSlugs: FFP,
     language: "English",
-    revision: "Oct 2025",
+    revision: "2026",
     availability: "download",
-    file: "/documents/kosmex-tds-film-faced-plywood-2025-10.pdf",
+    file: "/documents/kosmex-tds-film-faced-anti-slip-2026.pdf",
     issuer: "Kosmex Co., Ltd.",
     summary:
-      "Manufacturer data for Eco Form, Premium Form and Anti-slip Form film faced plywood: film, core, glue, bonding, emission class, moisture, density, tolerances and bending properties.",
+      "Manufacturer data for Common, Medium, Premium and Anti-slip film faced plywood: film weight, core, glue, re-use cycles, bonding, emission class, moisture, density, tolerances and bending properties.",
     caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed.",
   },
   {
@@ -171,17 +171,49 @@ export const documents: Doc[] = [
     caveat:
       "The certificate alone does not make a product FSC-certified. Only products sold with an FSC claim on the invoice and delivery documents are covered. Verify current status at info.fsc.org.",
   },
+  {
+    slug: "test-report-formaldehyde",
+    title: "Formaldehyde Emission Test — EN 717-1",
+    docClass: "lab-test",
+    product: "Plywood (9 mm, 5-ply sample)",
+    productSlugs: ["furniture-plywood", "birch-plywood", "eucalyptus-plywood", "poplar-plywood", "ev-plywood", "upholstery-plywood", "upholstery-plywood-overview", "bed-frame-bed-slat-applications", "packing-plywood"],
+    language: "English",
+    revision: "5 Jun 2026",
+    availability: "download",
+    file: "/documents/test-report-formaldehyde-en717-1-2026-06.pdf",
+    issuer: "T&T Laboratory, Hanoi (ISO/IEC 17025)",
+    reference: "005/MC/II/26",
+    summary: "Chamber test of formaldehyde emission from a 9 mm, 5-ply hardwood plywood sample (UF glue), to EN 717-1.",
+    facts: [
+      { label: "Formaldehyde emission", value: "0.022 mg/m³ (at 23 °C, 45% RH)" },
+      { label: "Reference requirement", value: "0.124 mg/m³ (CEN report CR 213)" },
+      { label: "Test method", value: "EN 717-1, 72 h" },
+      { label: "Sample", value: "HWPW – VC & UF, 9.0 mm, 5 plies" },
+    ],
+    caveat: "Results refer to the tested sample only (sample purpose: daily testing).",
+  },
+  {
+    slug: "catalogue-kosmex-plywood",
+    title: "Kosmex Plywood Product Catalogue",
+    docClass: "catalogue",
+    product: "All products",
+    productSlugs: ["*"],
+    language: "English",
+    availability: "download",
+    file: "/documents/kosmex-plywood-catalogue.pdf",
+    issuer: "Kosmex Co., Ltd.",
+    summary: "Company profile, factories, general specifications and the film faced, furniture, construction plywood and bed slat ranges.",
+  },
+  { slug: "tds-ev-plywood", title: "Technical Data Sheet — EV Plywood", docClass: "tds", product: "Furniture Plywood — EV", productSlugs: ["ev-plywood", "furniture-plywood"], language: "English", revision: "2026", availability: "download", file: "/documents/kosmex-tds-ev-plywood-2026.pdf", issuer: "Kosmex Co., Ltd.", summary: "EV face, eucalyptus/acacia core, MR or WBP glue, 4.6–25 mm, tolerances, E0.5 emission, moisture and density.", caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed." },
+  { slug: "tds-upholstery-plywood", title: "Technical Data Sheet — Upholstery Plywood", docClass: "tds", product: "Upholstery Plywood", productSlugs: ["upholstery-plywood", "upholstery-plywood-overview"], language: "English", revision: "2026", availability: "download", file: "/documents/kosmex-tds-upholstery-plywood-2026.pdf", issuer: "Kosmex Co., Ltd.", summary: "Pine CP/CP faces on eucalyptus core, MR glue, 12 mm reference panel, thickness tolerance, E0.5 emission, density and moisture.", caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed." },
+  { slug: "tds-bed-slats", title: "Technical Data Sheet — Bed Slats", docClass: "tds", product: "Upholstery — Bed slats", productSlugs: ["bed-frame-bed-slat-applications", "upholstery-plywood"], language: "English", revision: "2026", availability: "download", file: "/documents/kosmex-tds-bed-slats-2026.pdf", issuer: "Kosmex Co., Ltd.", summary: "Rubberwood bed slats: sizes, tolerance, MR glue, density, emission class and moisture content.", caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed." },
+  { slug: "tds-raw-eucalyptus-plywood", title: "Technical Data Sheet — Raw Eucalyptus Plywood", docClass: "tds", product: "Packing Plywood — Eucalyptus", productSlugs: ["raw-eucalyptus-plywood", "packing-plywood"], language: "English", revision: "2026", availability: "download", file: "/documents/kosmex-tds-raw-eucalyptus-plywood-2026.pdf", issuer: "Kosmex Co., Ltd.", summary: "Eucalyptus CP/CP raw plywood: 8–25 mm, MR/Melamine glue, density, tolerances, emission class and moisture.", caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed." },
+  { slug: "tds-styrax-plywood", title: "Technical Data Sheet — Styrax Plywood", docClass: "tds", product: "Packing Plywood — Styrax", productSlugs: ["styrax-okoume-bintangor-plywood", "packing-plywood"], language: "English", revision: "2026", availability: "download", file: "/documents/kosmex-tds-styrax-plywood-2026.pdf", issuer: "Kosmex Co., Ltd.", summary: "Full-styrax lightweight plywood: 6–21 mm, MR glue, density, tolerances, E0.5 emission and moisture.", caveat: "Manufacturer declaration. Values are not third-party certified unless a separate test report is listed." },
   // ---- Slots: not yet published -------------------------------------------
-  { slug: "tds-furniture-plywood", title: "Technical Data Sheet — Furniture Plywood", docClass: "tds", product: "Furniture Plywood", productSlugs: ["furniture-plywood", "birch-plywood", "eucalyptus-plywood", "poplar-plywood", "ev-plywood"], language: "English", availability: "pending", summary: "Species, grades, glue, thickness range, tolerances and emission class per furniture range." },
-  { slug: "tds-upholstery-plywood", title: "Technical Data Sheet — Upholstery Plywood", docClass: "tds", product: "Upholstery Plywood", productSlugs: ["upholstery-plywood", "upholstery-plywood-overview", "sofa-frame-applications", "bed-frame-bed-slat-applications"], language: "English", availability: "pending", summary: "Lay-up, thickness, bonding and machining guidance for frame components and slats." },
-  { slug: "tds-packing-plywood", title: "Technical Data Sheet — Packing Plywood", docClass: "tds", product: "Packing Plywood", productSlugs: ["packing-plywood", "raw-acacia-plywood", "raw-eucalyptus-plywood", "styrax-okoume-bintangor-plywood"], language: "English", availability: "pending", summary: "Species, glue, thickness, panel sizes and moisture limits for packing grades." },
   { slug: "spec-film-faced-grades", title: "Product Specification — Film Faced Grades", docClass: "specification", product: "Film Faced Plywood", productSlugs: FFP, language: "English", availability: "on-request", summary: "Order-level specification sheet confirming grade, film, thickness, size and edge sealing." },
   { slug: "qc-report-batch", title: "Batch QC Inspection Report", docClass: "qc-report", product: "All products", productSlugs: ["*"], language: "English", availability: "on-request", summary: "Per-shipment record of dimensional, moisture, surface and bonding checks against agreed acceptance criteria." },
-  { slug: "test-report-formaldehyde", title: "Formaldehyde Emission Test Report", docClass: "lab-test", product: "Film Faced / Furniture Plywood", productSlugs: ["*"], language: "English", availability: "pending", summary: "Emission class (E1/E2 declared in the TDS) requires a published report naming method and sample." },
-  { slug: "test-report-bonding-en-314", title: "Bonding Quality Test Report — EN 314", docClass: "lab-test", product: "Film Faced Plywood", productSlugs: FFP, language: "English", availability: "pending", summary: "Bond class per EN 314-1/-2 for the declared film faced grades." },
-  { slug: "dop-ce-anti-slip", title: "Declaration of Performance / CE marking", docClass: "dop", product: "Film Faced Plywood", productSlugs: FFP, language: "English", availability: "pending", summary: "kosmexgroup.com refers to CE 2+ for anti-slip film faced plywood. The DoP and notified-body certificate have not been published." },
+  { slug: "dop-ce-anti-slip", title: "Declaration of Performance / CE marking", docClass: "dop", product: "Film Faced Plywood", productSlugs: FFP, language: "English", availability: "on-request", summary: "CE marking is available for film faced plywood when the buyer requires it. The DoP is sent on request." },
   { slug: "traceability-legal-sourcing", title: "Legal Sourcing & Traceability File", docClass: "traceability", product: "All products", productSlugs: ["*"], language: "English", availability: "on-request", summary: "Species, origin and supplier documentation supporting buyers' due-diligence obligations." },
-  { slug: "catalogue-kosmex-plywood", title: "Kosmex Plywood Product Catalogue", docClass: "catalogue", product: "All products", productSlugs: ["*"], language: "English", availability: "pending", summary: "Complete product catalogue for the four Kosmex Plywood ranges." },
 ];
 
 export const getDoc = (slug: string) => documents.find((d) => d.slug === slug);

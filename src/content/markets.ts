@@ -44,7 +44,7 @@ export const markets: Market[] = [
       { title: "Packing-grade definition", text: "Agree nail-holding needs, acceptable face defects and moisture at delivery for packaging lines in advance." },
       { title: "EUDR due diligence", text: "As EU operators, importers must collect geolocation and legality information under Regulation (EU) 2023/1115. Check current application dates." },
     ],
-    documents: [...COMMON_DOCS, "tds-packing-plywood"],
+    documents: [...COMMON_DOCS, "tds-raw-eucalyptus-plywood"],
     gateways: ["Gdańsk", "Gdynia"],
     language: "Polish; English for technical correspondence",
     faqs: [
@@ -70,7 +70,7 @@ export const markets: Market[] = [
       { title: "Formaldehyde emissions", text: "Interior panels are subject to EU and national emission rules. Request the emission class and test report for the specific product." },
       { title: "Sampling before volume", text: "Plan a sample or trial shipment so your production line can approve the substrate." },
     ],
-    documents: ["tds-furniture-plywood", "tds-upholstery-plywood", "test-report-formaldehyde", "qc-report-batch"],
+    documents: ["tds-ev-plywood", "tds-upholstery-plywood", "test-report-formaldehyde", "qc-report-batch"],
     gateways: ["Genoa", "La Spezia", "Trieste"],
     language: "Italian; English for technical correspondence",
     faqs: [
@@ -100,7 +100,7 @@ export const markets: Market[] = [
     gateways: ["Valencia", "Barcelona", "Algeciras"],
     language: "Spanish; English for technical correspondence",
     faqs: [
-      { q: "Which film faced grade suits multi-storey building work?", a: "Premium grade (180 g/m² film, MUF/PF glue) is intended for repeated-cycle building formwork. Compare grades on the Film Faced Plywood page and confirm with the sales team." },
+      { q: "Which film faced grade suits multi-storey building work?", a: "Premium grade (145 g/m² film, MUF/PF glue, up to 20+ re-uses) is intended for repeated-cycle building formwork. Compare grades on the Film Faced Plywood page and confirm with the sales team." },
       { q: "Can panels be supplied in 1250 × 2500 mm?", a: "Yes. 1220 × 2440, 1250 × 2500 and 610 × 2500 mm are standard formats, and customised sizes are possible." },
     ],
     article: "film-faced-plywood-tds-guide",
@@ -174,7 +174,7 @@ export const markets: Market[] = [
       { title: "Inspection records", text: "Ask for a batch QC report and, if needed, an independent pre-shipment inspection." },
       { title: "Freight planning", text: "Container routing to Black Sea ports should be planned early in the order schedule." },
     ],
-    documents: [...COMMON_DOCS, "tds-packing-plywood"],
+    documents: [...COMMON_DOCS, "tds-raw-eucalyptus-plywood"],
     gateways: ["Varna", "Burgas"],
     language: "Bulgarian; English for technical correspondence",
     faqs: [
@@ -223,10 +223,10 @@ export const markets: Market[] = [
     focusReason: "Furniture plywood for panel distribution; film faced plywood for construction.",
     considerations: [
       { title: "Certified sourcing", text: "Kosmex holds FSC Chain of Custody certificate BV-COC-220900 for trading of FSC 100% and FSC Mix products. Specify FSC-claimed product at order stage." },
-      { title: "Emission evidence", text: "Request emission data for each product. The formaldehyde test report is pending publication." },
+      { title: "Emission evidence", text: "Furniture plywood is declared E0.5. An EN 717-1 chamber test of a 9 mm sample measured 0.022 mg/m³ (T&T Laboratory, June 2026)." },
       { title: "Climate considerations", text: "Panels arriving from a tropical origin should acclimatise before machining or installation." },
     ],
-    documents: ["fsc-chain-of-custody", "traceability-legal-sourcing", "test-report-formaldehyde", "tds-furniture-plywood"],
+    documents: ["fsc-chain-of-custody", "traceability-legal-sourcing", "test-report-formaldehyde", "tds-ev-plywood"],
     gateways: ["Gothenburg"],
     language: "Swedish; English widely used in business",
     faqs: [

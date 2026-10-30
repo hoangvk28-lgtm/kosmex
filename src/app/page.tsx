@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function Home() {
   const fsc = getDoc("fsc-chain-of-custody")!;
-  const docRows = ["tds-film-faced-plywood", "test-report-bending-film-faced-18mm", "test-report-anti-slip-din-51130", "tds-furniture-plywood"].map((s) => getDoc(s)!);
+  const docRows = ["tds-film-faced-plywood", "test-report-bending-film-faced-18mm", "test-report-anti-slip-din-51130", "test-report-formaldehyde"].map((s) => getDoc(s)!);
 
   return (
     <>
@@ -99,9 +99,9 @@ export default function Home() {
             </p>
             <dl className="mt-10 max-w-xl divide-y divide-white/12 border-y border-white/12">
               {[
-                ["Film", "Brown / black phenolic · 120 · 180 · 220 g/m²"],
-                ["Sizes", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm · customised size"],
-                ["Thickness", "9–21 mm"],
+                ["Film", "Brown / black phenolic · 120 · 130 · 145 g/m²"],
+                ["Sizes", "1220 × 2440 · 1250 × 2500 mm · customised size"],
+                ["Thickness", "11–21 mm"],
                 ["Glue", "MUF / PF · EN 314-2 class per grade"],
                 ["Surface", "Abrasion 680 rev. (EN 438-2) · R10 anti-slip variant"],
               ].map(([k, v]) => (
@@ -111,10 +111,10 @@ export default function Home() {
                 </div>
               ))}
             </dl>
-            <p className="mt-3 text-[.78rem] text-white/45">Kosmex TDS (Oct 2025) and published test reports.</p>
+            <p className="mt-3 text-[.78rem] text-white/45">Kosmex TDS (2026) and published test reports.</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button href="/products/film-faced-plywood/" variant="gold">View specifications</Button>
-              <Button href="/documents/kosmex-tds-film-faced-plywood-2025-10.pdf" variant="light" icon="download">Data sheet</Button>
+              <Button href="/documents/kosmex-tds-film-faced-anti-slip-2026.pdf" variant="light" icon="download">Data sheet</Button>
             </div>
           </div>
           <div className="lg:col-span-6">

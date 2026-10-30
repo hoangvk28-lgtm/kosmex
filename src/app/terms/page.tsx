@@ -1,4 +1,4 @@
-import { PageHero, PendingNote } from "@/components/ui";
+import { PageHero } from "@/components/ui";
 import { site } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -10,7 +10,7 @@ export default function TermsPage() {
       <PageHero crumbs={[{ name: "Terms", href: "/terms/" }]} title="Terms of Use" />
       <section className="section-sm">
         <div className="wrap max-w-3xl space-y-6 text-charcoal/85">
-          <PendingNote>Draft for legal review before launch.</PendingNote>
+          
           <h2 className="text-[length:var(--text-h3)]">Information on this website</h2>
           <p>Product information is provided for general guidance. Values labelled “Kosmex TDS” are manufacturer declarations. Values labelled “Test report” refer to the tested sample only. Fields marked “To be confirmed” are not specifications. Binding specifications are those agreed in writing for each order.</p>
           <h2 className="text-[length:var(--text-h3)]">Documents</h2>

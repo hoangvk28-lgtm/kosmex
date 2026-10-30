@@ -16,6 +16,13 @@
       2560
     ]
   },
+  "bed-slats-moisture": {
+    "width": 963,
+    "height": 1280,
+    "variants": [
+      640
+    ]
+  },
   "birch-panel-stack": {
     "width": 2568,
     "height": 1926,
@@ -63,6 +70,24 @@
       2560
     ]
   },
+  "eucalyptus-face-line": {
+    "width": 2560,
+    "height": 1707,
+    "variants": [
+      640,
+      1200,
+      1920,
+      2560
+    ]
+  },
+  "eucalyptus-face-panel-real": {
+    "width": 1707,
+    "height": 2560,
+    "variants": [
+      640,
+      1200
+    ]
+  },
   "eucalyptus-face-panel": {
     "width": 1920,
     "height": 2026,
@@ -70,6 +95,13 @@
       640,
       1200,
       1920
+    ]
+  },
+  "ev-plywood-edge": {
+    "width": 1178,
+    "height": 2560,
+    "variants": [
+      640
     ]
   },
   "ev-plywood-sheets": {
@@ -283,6 +315,15 @@
       1920
     ]
   },
+  "packing-plywood-bundle": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      640,
+      1200,
+      1920
+    ]
+  },
   "pallet-labelling": {
     "width": 1536,
     "height": 1024,
@@ -378,6 +419,30 @@
     "variants": [
       640,
       1200
+    ]
+  },
+  "raw-acacia-stacks": {
+    "width": 608,
+    "height": 1080,
+    "variants": [
+      608
+    ]
+  },
+  "raw-eucalyptus-panel": {
+    "width": 1001,
+    "height": 1600,
+    "variants": [
+      640
+    ]
+  },
+  "styrax-plywood-stack": {
+    "width": 2560,
+    "height": 1920,
+    "variants": [
+      640,
+      1200,
+      1920,
+      2560
     ]
   },
   "upholstery-panel-stack": {

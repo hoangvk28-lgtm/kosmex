@@ -1,7 +1,7 @@
 import { Img } from "./Img";
 import { Icon } from "./Icon";
 import { TechnicalTable } from "./TechnicalTable";
-import { Breadcrumbs, Button, PendingNote, SectionHeading, StatusBadge, StatusLegend } from "./ui";
+import { Breadcrumbs, Button, SectionHeading, StatusBadge } from "./ui";
 import type { Status } from "@/content/site";
 import type { SpecRow } from "@/content/products";
 import { getDoc } from "@/content/documents";
@@ -24,7 +24,7 @@ export function FilmHero() {
             Phenolic film faced formwork plywood on acacia and eucalyptus hardwood cores, with the KOSMEX logo printed directly on the film surface.
           </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {["Logo-printed film for site identification", "120 · 180 · 220 g/m² film options", "1220 × 2440 · 1250 × 2500 · 610 × 2500 mm or customised", "EN-method laboratory test reports"].map((b) => (
+            {["Logo-printed film for site identification", "120 · 130 · 145 g/m² film · 180–240 g/m² anti-slip", "Up to 20+ re-uses (Premium, PF glue)", "EN-method laboratory test reports"].map((b) => (
               <li key={b} className="flex gap-3 text-[.95rem] text-white/90">
                 <Icon name="check" className="mt-1 h-4 w-4 shrink-0 text-gold" strokeWidth={2.4} />{b}
               </li>
@@ -51,25 +51,26 @@ const P: Cell = { s: "pending" };
 const D = (v: string): Cell => ({ v, s: "declared" });
 
 const grades = [
-  { slug: "economy-grade", name: "Economy", tds: "Eco Form" },
-  { slug: "standard-grade", name: "Standard", tds: "—" },
-  { slug: "premium-grade", name: "Premium", tds: "Premium Form" },
+  { slug: "economy-grade", name: "Economy", tds: "Common" },
+  { slug: "medium-grade", name: "Medium", tds: "Medium" },
+  { slug: "premium-grade", name: "Premium", tds: "Premium" },
 ];
 
 const comparison: { attr: string; cells: [Cell, Cell, Cell] }[] = [
-  { attr: "Core composition", cells: [D("Acacia"), P, D("Acacia / eucalyptus mix")] },
-  { attr: "Film weight", cells: [D("120 g/m², black / brown"), P, D("180 g/m², black / brown")] },
-  { attr: "Glue specification", cells: [D("MUF"), P, D("MUF / PF")] },
-  { attr: "Bonding performance", cells: [D("BR-6h boil resistant"), P, D("EN 314-2 Class 2 & 3")] },
-  { attr: "Bending strength L / W (EN 310)", cells: [D("40 / 30 N/mm²"), P, { v: "49 / 47 N/mm² · test report", s: "verified" }] },
-  { attr: "Thickness options", cells: [P, P, P] },
-  { attr: "Surface quality", cells: [D("Smooth phenolic film"), P, D("Smooth phenolic film")] },
-  { attr: "Recommended application", cells: [D("Short-cycle formwork, foundations"), P, D("Repeated-cycle building formwork")] },
-  { attr: "Available documentation", cells: [D("TDS (Oct 2025)"), P, { v: "TDS + EN 310 test report", s: "verified" }] },
+  { attr: "Core composition", cells: [D("Acacia / eucalyptus / mix, AB grade, hand-jointed"), D("Acacia / eucalyptus / mix, AB grade, hand-jointed"), D("Acacia / eucalyptus / rubber / mix, 100% A grade, machine-jointed")] },
+  { attr: "Core drying", cells: [D("Sun-dried"), D("Machine-dried"), D("Machine-dried")] },
+  { attr: "Film weight", cells: [D("120 g/m², black / brown"), D("130 g/m², black / brown"), D("145 g/m², black / brown")] },
+  { attr: "Glue specification", cells: [D("MUF"), D("WBP melamine (MUF)"), D("MUF / PF")] },
+  { attr: "Bonding performance", cells: [D("BR-6h boil resistant"), D("BR-12h boil resistant"), D("EN 314-2 Class 2 & 3")] },
+  { attr: "Number of re-uses", cells: [D("6–8 times"), D("10–12 times"), D("12–15 (MUF) · 20+ (PF)")] },
+  { attr: "Bending strength L / W (EN 310)", cells: [D("40 / 30 N/mm²"), D("40 / 30 N/mm²"), { v: "49 / 47 N/mm² · test report", s: "verified" }] },
+  { attr: "Thickness options", cells: [D("11–21 mm"), D("11–21 mm"), D("11–21 mm")] },
+  { attr: "Recommended application", cells: [D("Short-cycle formwork, foundations"), D("General construction formwork"), D("Repeated-cycle formwork, fences")] },
+  { attr: "Available documentation", cells: [D("TDS"), D("TDS"), { v: "TDS + EN 310 test report", s: "verified" }] },
 ];
 
 // Range-wide rows already shown per grade in the comparison table.
-const IN_COMPARISON = ["Core species", "Film weight", "Glue type", "Bonding classification", "Thickness options"];
+const IN_COMPARISON = ["Core species", "Film weight", "Glue type", "Bonding classification", "Thickness options", "Number of re-uses"];
 
 export function GradeComparison({ rows }: { rows: SpecRow[] }) {
   const rangeRows = rows.filter((r) => !IN_COMPARISON.includes(r.label));
@@ -80,7 +81,7 @@ export function GradeComparison({ rows }: { rows: SpecRow[] }) {
           align="split"
           eyebrow="Specifications & grades"
           title="Three grades, one specification"
-          lede="Economy and Premium map to the Eco Form and Premium Form columns of the Kosmex Technical Data Sheet. Standard has no published specification yet."
+          lede="Economy, Medium and Premium correspond to the Common, Medium and Premium columns of the Kosmex Technical Data Sheet."
         />
         <div className="table-scroll mt-12 rounded-2xl border border-line bg-white">
           <table className="spec-table min-w-[780px]">
@@ -113,10 +114,6 @@ export function GradeComparison({ rows }: { rows: SpecRow[] }) {
         </div>
         <h3 className="mt-14 text-[1.25rem]">Range-wide specification</h3>
         <div className="mt-6"><TechnicalTable rows={rangeRows} caption="Film faced plywood range-wide specifications" legend={false} /></div>
-        <StatusLegend className="mt-5" />
-        <PendingNote className="mt-6">
-          Grade names (Economy / Standard / Premium) are provisional until Kosmex confirms its commercial grade structure. Re-use cycles are deliberately left out: the TDS gives an indicative figure, but no test evidence has been published.
-        </PendingNote>
       </div>
     </section>
   );
@@ -169,7 +166,7 @@ export function AntiSlipVariant() {
           <p className="eyebrow mb-5">Surface variant</p>
           <h2 className="text-[length:var(--text-h3)]">Anti-slip film (hexagon / rice pattern)</h2>
           <p className="mt-4 max-w-2xl text-muted">
-            A 220 g/m² anti-slip film for truck, trailer and container flooring and walkways. It is listed in the Kosmex TDS alongside the Eco and Premium grades and has two independent test reports.
+            A 180–240 g/m² anti-slip film (rice or hexagon pattern) for truck, trailer and container flooring and walkways. Kosmex declares an anti-slip index of R10–R13; the film has two independent test reports.
           </p>
         </div>
         <dl className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:col-span-5">
